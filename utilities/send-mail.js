@@ -147,10 +147,10 @@ exports.notice = (comment) => {
     if (process.env.QQ != null) {
       qq = "&qq=" + process.env.QQ;
     }
-    const scContent = `@face=119@您的 ${
+    const scContent = `@face=60@您的 ${
       process.env.SITE_NAME
     } 上有新评论了！
-@face=183@${name} 发表评论：
+@face=185@${name} 发表评论：
 ${$(
   text
     .replace(/  <img.*?src="(.*?)".*?>/g, "\n[图片]$1\n")
@@ -159,7 +159,7 @@ ${$(
   .text()
   .replace(/\n+/g, "\n")
   .replace(/\n+$/g, "")}
-${url + "#" + comment.get("objectId")}`;
+来看@face=6@${url + "#" + comment.get("objectId")}`;
     axios
       .get(
         `https://qmsg.zendee.cn/send/${
